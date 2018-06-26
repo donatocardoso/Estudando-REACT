@@ -12,7 +12,22 @@ section#conteudo iframe {
   border: none;
 }
 
+section#conteudo input[type='button'] {
+  width: 49.8%;
+  display: inline-block;
+  border: none;
+  padding: 3px 0;
+  cursor: pointer;
+}
+
+section#conteudo input[type='button']:hover {
+  color: white;
+  background: black;
+}
+
 img {
   width: 100%;
   position: relative;
 }
+
+
