@@ -1,5 +1,18 @@
 body {
+  width: 1345px;
+  height: auto;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+section#conteudo iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+img {
+  width: 100%;
+  position: relative;
 }
