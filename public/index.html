@@ -23,10 +23,16 @@
     </header>
 
     <section id="conteudo">
-      <input type="button" value="React">
-      <input type="button" value="WebForms">
+      <script type="JavaScript">
+        import c from '../public/Config/Route';
+        
+        document.getElementById('conteudo').appendChild(
+          "<button onClick={" + c.Click() + "}>React</button>"+
+          "<button onClick={" + c.Click() + "}>WebForms</button>"
+        );
+      </script>
 
-      <iframe src=""></iframe>
+      <iframe id="renderPage" src=""></iframe>
     </section>
 
     <footer id="rodape">

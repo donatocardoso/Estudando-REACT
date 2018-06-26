@@ -12,7 +12,7 @@ section#conteudo iframe {
   border: none;
 }
 
-section#conteudo input[type='button'] {
+section#conteudo button {
   width: 49.8%;
   display: inline-block;
   border: none;
@@ -20,7 +20,7 @@ section#conteudo input[type='button'] {
   cursor: pointer;
 }
 
-section#conteudo input[type='button']:hover {
+section#conteudo button:hover {
   color: white;
   background: black;
 }
