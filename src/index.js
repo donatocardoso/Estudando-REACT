@@ -12,3 +12,5 @@ export default Click = (route) => {
             r.component();
     }
 };
+
+//App.testeJQUERY();
