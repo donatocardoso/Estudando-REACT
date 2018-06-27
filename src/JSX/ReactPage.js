@@ -3,7 +3,7 @@ import logo from '../Content/logo.svg';
 import "../Content/ReactPage.css";
 
 export default class ReactPage extends Component {
-  
+
   render() {
     return (
       <div className="App">
@@ -17,5 +17,5 @@ export default class ReactPage extends Component {
       </div>
     );
   }
-  
+
 }
