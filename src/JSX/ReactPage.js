@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import logo from '../Content/logo.svg';
 import "../Content/ReactPage.css";
 
-class ReactPage extends Component {
+export default class ReactPage extends Component {
   
   render() {
     return (
@@ -19,5 +19,3 @@ class ReactPage extends Component {
   }
   
 }
-
-export default ReactPage;

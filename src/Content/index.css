@@ -7,10 +7,9 @@ body {
 }
 
 section#conteudo iframe {
-  width: 100%;
-  height: auto;
+  min-height: 100%;
+  min-width: 100%;
   overflow: auto;
-  border: none;
 }
 
 section#conteudo button {

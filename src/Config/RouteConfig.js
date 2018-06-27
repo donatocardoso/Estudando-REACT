@@ -1,26 +1,18 @@
-import { Component } from 'react';
 import $ from 'jquery';
+import ReactPage from './JSX/ReactPage';
 
-class RouteConfig extends Component {
+const RouteConfig = {
+  RefreshPage: (src) => (function () {
+    $('#renderPage').prop('src', src);
+  }),
 
-  constructor() {
-    super();
+  ResizePage: () => (function () {
+    $('#renderPage').css('height', $('#renderPage').offsetParent()[0].offsetHeight + 'px');
+  }),
 
-    const RefreshIFrame = () => (function () {
-      console.log('preparando !!!');
-      $('#renderPage').prop('src', window.location.href);
-    });
-
-    const ResizeIFrame = () => (function () {
-      console.log('carregou !!!');
-    });
-  }
-  
-  /*.contentDocument.body).ready(function(elem) {
-  //console.log('carregou');
-  //$('#renderPage').style.height = $('#renderPage').contentDocument.body.offsetHeight + 'px';
-
-  //$('iframe').style.height = $('iframe').contentDocument.body.offsetHeight+'px';*/
+  Routes: [
+    { Url: '/react', Component: ReactPage }
+  ]
 }
 
 export default RouteConfig;

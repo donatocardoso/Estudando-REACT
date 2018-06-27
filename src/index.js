@@ -2,17 +2,10 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import ImgMenu from './Content/Images/menu.png';
 import ImgRodape from './Content/Images/rodape.png';
-
-/*
-import App from './JSX/App';
-*/
+import './Content/index.css';
 import RouteConfig from './Config/RouteConfig';
 
-import './Content/index.css';
-
-console.log(RouteConfig);
-
-class Index extends Component {
+export default class Index extends Component {
 
     render() {
         return (
@@ -22,10 +15,10 @@ class Index extends Component {
                 </header>
 
                 <section id='conteudo'>
-                    <button onClick={RouteConfig.RefreshIFrame().bind(this)}>React</button>
-                    <button onClick={RouteConfig.RefreshIFrame().bind(this)}>WebForms</button>
+                    <button onClick={RouteConfig.RefreshPage('/react')}>React</button>
+                    <button onClick={RouteConfig.RefreshPage(window.location.href)}>WebForms</button>
 
-                    <iframe id='renderPage' title='iframe' ></iframe>
+                    <iframe id='renderPage' title='iframe' onLoad={RouteConfig.ResizePage()} scrolling='no'></iframe>
                 </section>
 
                 <footer id='rodape'>
