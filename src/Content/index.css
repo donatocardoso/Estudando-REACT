@@ -9,6 +9,7 @@ body {
 section#conteudo iframe {
   width: 100%;
   height: auto;
+  overflow: auto;
   border: none;
 }
 

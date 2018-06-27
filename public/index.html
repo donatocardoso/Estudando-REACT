@@ -9,7 +9,6 @@
     <link rel="shortcut icon" href="./favicon.ico">
 
     <title>React</title>
-    <link href="../src/Content/index.css" rel="stylesheet">
   </head>
 
   <body>
@@ -18,26 +17,7 @@
       You need to enable JavaScript to run this app.
     </noscript>
 
-    <header id="cabecalho">
-      <img src="../src/Content/Images/menu.png" alt="Menu">
-    </header>
-
-    <section id="conteudo">
-      <script type="JavaScript">
-        import c from '../public/Config/Route';
-        
-        document.getElementById('conteudo').appendChild(
-          "<button onClick={" + c.Click() + "}>React</button>"+
-          "<button onClick={" + c.Click() + "}>WebForms</button>"
-        );
-      </script>
-
-      <iframe id="renderPage" src=""></iframe>
-    </section>
-
-    <footer id="rodape">
-      <img src="../src/Content/Images/rodape.png" alt="Rodapé">
-    </footer>
-
+    <div id="root"></div>
+    
   </body>
 </html>

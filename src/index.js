@@ -1,16 +1,40 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import ImgMenu from './Content/Images/menu.png';
+import ImgRodape from './Content/Images/rodape.png';
+
+/*
 import App from './JSX/App';
-import Route from '../public/Config/Route';
+*/
+import RouteConfig from './Config/RouteConfig';
+
 import './Content/index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+console.log(RouteConfig);
 
-export default Click = (route) => {
-    for (const r of Route) {
-        if(r.path == route)
-            r.component();
+class Index extends Component {
+
+    render() {
+        return (
+            <div id='container'>
+                <header id='cabecalho'>
+                    <img src={ImgMenu} alt='Menu' />
+                </header>
+
+                <section id='conteudo'>
+                    <button onClick={RouteConfig.RefreshIFrame().bind(this)}>React</button>
+                    <button onClick={RouteConfig.RefreshIFrame().bind(this)}>WebForms</button>
+
+                    <iframe id='renderPage' title='iframe' ></iframe>
+                </section>
+
+                <footer id='rodape'>
+                    <img src={ImgRodape} alt='Rodapé' />
+                </footer>
+            </div>
+        );
     }
-};
 
-//App.testeJQUERY();
+}
+
+ReactDOM.render(<Index />, document.getElementById('root'));
