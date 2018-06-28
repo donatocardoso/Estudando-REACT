@@ -19,7 +19,7 @@ class Index extends Component {
 
                 <section id='conteudoReact'></section>
 
-                <iframe id='conteudoWebForms' title='iframe' scrolling='yes'></iframe>
+                <iframe id='conteudoWebForms' title='iframe' onLoad={() => RenderConfig.Error404()} scrolling='yes'></iframe>
 
                 <footer id='rodape'>
                     Rodapé
