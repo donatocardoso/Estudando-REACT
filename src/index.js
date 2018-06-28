@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import ImgMenu from './Content/Images/menu.png';
-import ImgRodape from './Content/Images/rodape.png';
+import ImgLogo from './Content/Images/logo.png';
 import './Content/index.css';
-import RouteConfig from './Config/RouteConfig';
+import RenderConfig from './Config/RenderConfig';
+import ReactPage from './JSX/ReactPage';
 
 export default class Index extends Component {
 
@@ -11,18 +10,18 @@ export default class Index extends Component {
         return (
             <div id='container'>
                 <header id='cabecalho'>
-                    <img src={ImgMenu} alt='Menu' />
+                    <img src={ImgLogo} alt='Logo' />
+
+                    <button onClick={() => RenderConfig.React(<ReactPage />, 'conteudo')}>React</button>
+                    <button onClick={() => RenderConfig.WebForms('/Views/Brinde.aspx')}>WebForms</button>
                 </header>
 
-                <section id='conteudo'>
-                    <button onClick={RouteConfig.RefreshPage('/react')}>React</button>
-                    <button onClick={RouteConfig.RefreshPage(window.location.href)}>WebForms</button>
+                <section id='conteudo'></section>
 
-                    <iframe id='renderPage' title='iframe' onLoad={RouteConfig.ResizePage()} scrolling='no'></iframe>
-                </section>
+                <iframe id='renderPage' title='iframe' scrolling='yes'></iframe>
 
                 <footer id='rodape'>
-                    <img src={ImgRodape} alt='Rodapé' />
+                    Rodapé
                 </footer>
             </div>
         );
@@ -30,4 +29,5 @@ export default class Index extends Component {
 
 }
 
-ReactDOM.render(<Index />, document.getElementById('root'));
+RenderConfig.React(<Index />, 'root');
+RenderConfig.React(<ReactPage />, 'conteudo');

@@ -1,5 +1,6 @@
 {
-    "git.ignoreLimitWarning": true,
-    "files.encoding": "utf8",
-    "files.autoSave": "onFocusChange",
+	"git.ignoreLimitWarning": true,
+	"files.encoding": "utf8",
+	"files.autoSave": "onFocusChange",
+	"editor.tabSize": 4,
 }
