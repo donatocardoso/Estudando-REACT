@@ -7,11 +7,12 @@ const RenderConfig = {
 		$('#renderPage').hide();
 		$('#conteudo').show();
 
-		ReactDOM.render(component, document.getElementById(idElement));
+		ReactDOM.render(component, $(idElement)[0]);
 	},
 
 	WebForms: function (src) {
 		$('#conteudo').hide();
+
 		$('#renderPage').prop('src', 'http://localhost:5001' + src).show();
 	},
 
