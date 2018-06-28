@@ -1,6 +1,7 @@
 import '../Content/index.css';
 import React, { Component } from 'react';
-import logo from '../Content/Images/icon.svg';
+
+import logo 	from '../Content/Images/icon.svg';
 
 class ReactPage extends Component {
 

@@ -1,8 +1,9 @@
-import './Content/index.css';
+import './1 - Web/Content/index.css';
 import React, { Component } from 'react';
-import ImgLogo from './Content/Images/logo.png';
-import RenderConfig from './Config/RenderConfig';
-import ReactPage from './JSX/ReactPage';
+
+import ImgLogo      from './1 - Web/Content/Images/logo.png';
+import RenderConfig from './1 - Web/Config/RenderConfig';
+import ReactPage    from './1 - Web/JSX/ReactPage';
 
 class Index extends Component {
 
