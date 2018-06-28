@@ -4,16 +4,16 @@ import $ from 'jquery';
 const RenderConfig = {
 
 	React: function (component, idElement) {
-		$('#renderPage').hide();
-		$('#conteudo').show();
-
+		$('#conteudoWebForms').hide();
+		
+		$('#conteudoReact').show();
 		ReactDOM.render(component, $(idElement)[0]);
 	},
 
 	WebForms: function (src) {
-		$('#conteudo').hide();
+		$('#conteudoReact').hide();
 
-		$('#renderPage').prop('src', 'http://localhost:5001' + src).show();
+		$('#conteudoWebForms').prop('src', 'http://localhost:5001' + src).show();
 	},
 
 }

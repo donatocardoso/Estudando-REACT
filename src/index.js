@@ -13,13 +13,13 @@ class Index extends Component {
                 <header id='cabecalho'>
                     <img src={ImgLogo} alt='Logo' />
 
-                    <button onClick={() => RenderConfig.React(<ReactPage />, '#conteudo')}>React</button>
+                    <button onClick={() => RenderConfig.React(<ReactPage />, '#conteudoReact')}>React</button>
                     <button onClick={() => RenderConfig.WebForms('/Views/Brinde.aspx')}>WebForms</button>
                 </header>
 
-                <section id='conteudo'></section>
+                <section id='conteudoReact'></section>
 
-                <iframe id='renderPage' title='iframe' scrolling='yes'></iframe>
+                <iframe id='conteudoWebForms' title='iframe' scrolling='yes'></iframe>
 
                 <footer id='rodape'>
                     Rodapé
@@ -31,6 +31,6 @@ class Index extends Component {
 }
 
 RenderConfig.React(<Index />, '#root');
-RenderConfig.React(<ReactPage />, '#conteudo');
+RenderConfig.React(<ReactPage />, '#conteudoReact');
 
 export default Index;
