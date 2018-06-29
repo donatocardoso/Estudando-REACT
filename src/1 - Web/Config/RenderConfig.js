@@ -1,8 +1,6 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
 
-import Error404 from '../JSX/Error404';
+import $ from 'jquery';
 
 const RenderConfig = {
 
@@ -16,12 +14,12 @@ const RenderConfig = {
 	WebForms: function (src) {
 		$('#conteudoReact').hide();
 
-		$('#conteudoWebForms').prop('src', 'http://localhost:500' + src).show();
+		$('#conteudoWebForms').prop('src', 'http://localhost:5001' + src).show();
 	},
 
 	Error404: function () {
 		console.log($('#conteudoWebForms'));
-		//RenderConfig.React(<Error404 />, '#conteudoReact');
+		RenderConfig.React(<Error404 />, '#conteudoReact');
 	},
 
 }
