@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import ImgLogo      from './1 - Web/Content/Images/logo.png';
 import RenderConfig from './1 - Web/Config/RenderConfig';
 import ReactPage    from './1 - Web/JSX/ReactPage';
+import Error404     from './1 - Web/JSX/Error404';
 
 class Index extends Component {
 
@@ -31,6 +32,6 @@ class Index extends Component {
 }
 
 RenderConfig.React(<Index />, '#root');
-RenderConfig.React(<ReactPage />, '#conteudoReact');
+RenderConfig.React(<Error404 />, '#conteudoReact');
 
 export default Index;

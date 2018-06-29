@@ -91,3 +91,8 @@ div#container footer {
 	position: fixed;
 	bottom: 0px;
 }
+
+div#divError404 {
+	color: #ff0000;
+	
+}
