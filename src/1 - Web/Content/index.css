@@ -35,6 +35,11 @@ body {
   	to { transform: rotate(360deg); }
 }
 
+@font-face {
+    font-family: ArialRounded;
+    src: url(ArialRoundedMTBoldNegrito.ttf);
+}
+
 div#container header#cabecalho {
 	height: 10%;
 	background: #f2f2f2;
@@ -93,6 +98,34 @@ div#container footer {
 }
 
 div#divError404 {
+	top: 50%;
+	height: 150px;
 	color: #ff0000;
-	
+	position: relative;
+	margin-top: -120px;
+	font-family: ArialRounded;
+}
+
+div#divError404 p#pIcon {
+	float: left;
+	font-size: 200px;
+	margin: 0 0 0 15%;
+	line-height: 150px;
+}
+
+div#divError404 p#pTitle {
+	font-size: 25px;
+	text-decoration: underline;
+}
+
+div#divError404 p#pMsg {
+	font-size: 20px;
+}
+
+div#divError404 p#pTitle,
+div#divError404 p#pMsg {
+	width: 50%;
+	float: right;
+	text-align: center;
+	margin: 15px 15% 0 0;
 }

@@ -6,7 +6,7 @@ class Error404 extends Component {
 	render() {
 		return (
 			<div id='divError404'>
-                <div id='divIcon'>X</div>
+                <p id='pIcon'>X</p>
 
                 <p id='pTitle'>Error 404</p>
                 <p id='pMsg'>
