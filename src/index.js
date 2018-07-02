@@ -1,10 +1,10 @@
-import './1 - Web/Content/index.css';
+import './1 - Web/Content/Css/index.css';
 import React, { Component } from 'react';
 
 import ImgLogo      from './1 - Web/Content/Images/logo.png';
 import RenderConfig from './1 - Web/Config/RenderConfig';
 import ReactPage    from './1 - Web/JSX/ReactPage';
-import Error404     from './1 - Web/JSX/Error404';
+import StartPage    from './1 - Web/JSX/StartPage';
 
 class Index extends Component {
 
@@ -32,6 +32,6 @@ class Index extends Component {
 }
 
 RenderConfig.React(<Index />, '#root');
-RenderConfig.React(<Error404 />, '#conteudoReact');
+RenderConfig.React(<StartPage />, '#conteudoReact');
 
 export default Index;

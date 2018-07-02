@@ -1,0 +1,42 @@
+div#divStartPage {
+    top: 50%;
+    margin: auto;
+    width: 570px;
+    height: 130px;
+    margin-top: -80px;
+    position: relative;
+}
+
+div#divStartPage div {
+    width: 130px;
+    height: 130px;
+    margin: 0 5%;
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ffffff;
+}
+
+div#divStartPage div img {
+    width: 80%;
+    height: 80%;
+    margin: 10%;
+    position: absolute;
+}
+
+div#divStartPage div span.legend {
+    bottom: 0;
+    width: 92%;
+    height: 45px;
+    padding: 5px;
+    display: none;
+    color: #ffffff;
+    line-height: 20px;
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+}
+
+div#divStartPage div:hover > span.legend {
+    display: block;
+    cursor: pointer;
+}

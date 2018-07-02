@@ -1,4 +1,4 @@
-import '../Content/index.css';
+import '../Content/Css/index.css';
 import React, { Component } from 'react';
 
 import logo 	from '../Content/Images/icon.svg';

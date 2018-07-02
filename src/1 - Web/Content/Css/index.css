@@ -37,7 +37,7 @@ body {
 
 @font-face {
     font-family: ArialRounded;
-    src: url(ArialRoundedMTBoldNegrito.ttf);
+    src: url(../Fonts/ArialRoundedMTBoldNegrito.ttf);
 }
 
 div#container header#cabecalho {

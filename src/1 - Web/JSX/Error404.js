@@ -1,4 +1,4 @@
-import '../Content/index.css';
+import '../Content/Css/index.css';
 import React, { Component } from 'react';
 
 class Error404 extends Component {
