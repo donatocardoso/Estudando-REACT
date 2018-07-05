@@ -1,18 +1,21 @@
 {
 	"name": "estudandoreact",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"private": true,
 	"dependencies": {
+		"express": "^4.16.3",
 		"jquery": "^3.3.1",
+		"node-cmd": "^3.0.0",
 		"react": "^16.4.1",
 		"react-dom": "^16.4.1",
 		"react-router-dom": "^4.3.1",
 		"react-scripts": "1.1.4"
 	},
 	"scripts": {
-		"start": "set PORT=3006 && react-scripts start",
+		"start": "node ./public/startproject.js",
 		"build": "react-scripts build",
 		"test": "react-scripts test --env=jsdom",
-		"eject": "react-scripts eject"
+		"eject": "react-scripts eject",
+		"stop": "taskkill -F -IM node.exe"
 	}
 }
