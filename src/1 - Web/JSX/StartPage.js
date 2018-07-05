@@ -2,10 +2,10 @@ import '../Content/Css/StartPage.css';
 import React, { Component } from 'react';
 import $ from 'jquery';
 
+import RenderConfig     from '../Config/RenderConfig';
 import MenuBrinde       from '../Content/Images/menuBrinde.png';
 import MenuParticipante from '../Content/Images/menuParticipante.png';
 import MenuPartida      from '../Content/Images/menuPartida.png';
-import RenderConfig     from '../Config/RenderConfig';
 import ReactPage        from '../JSX/ReactPage';
 
 class StartPage extends Component {
@@ -13,9 +13,9 @@ class StartPage extends Component {
 	render() {
 		return (
 			<div id='divStartPage'>
-				<button id='btnCadBrinde'>
+				<button id='btnCadBrinde' onClick={() => RenderConfig.WebForms('/Views/Brinde.aspx')}>
                     <img src={MenuBrinde} alt='Menu Brinde' />
-                    <span class='legend' onClick={() => RenderConfig.WebForms('/Views/Brinde.aspx')} >
+                    <span class='legend' onClick={() => $('#btnCadBrinde').trigger('click')} >
                         Cadastrar Brindes
                     </span>
                 </button>
@@ -37,6 +37,13 @@ class StartPage extends Component {
 		);
     }
 
+    EnableBtnParticipante() {
+
+    }
+
+    EnableBtnPartida() {
+        
+    }
 
 }
 
