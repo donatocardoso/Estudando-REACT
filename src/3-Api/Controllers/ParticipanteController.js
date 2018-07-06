@@ -1,12 +1,13 @@
+import participanteRepository from '../../5-Infra/Repositories/ParticipanteRepository'
+
 const ParticipanteController = {
 
     getAll: function() {
-        
-        return 'getAll';
+        return participanteRepository.getAll();;
     },
 
-    get: function() {
-        return 'get';
+    get: function(numSeqlParticipante) {
+        return participanteRepository.get(numSeqlParticipante);
     },
 
     post: function() {
@@ -17,10 +18,10 @@ const ParticipanteController = {
         return 'put';
     },
 
-    delete: function() {
-        return 'delete';
+    delete: function(numSeqlParticipante) {
+        return participanteRepository.delete(numSeqlParticipante);
     }
 
 }
 
-module.exports = ParticipanteController;
+export default ParticipanteController;

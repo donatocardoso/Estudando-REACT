@@ -9,7 +9,7 @@ function setRoutes() {
     });
 
     router.get('/participante/get', function (req, res) {
-        res.json(ParticipanteController.get());
+        res.json(ParticipanteController.get())
     });
 
     router.get('/participante/post', function (req, res) {
@@ -46,7 +46,8 @@ function setRoutes() {
 /**/      // test route to make sure everything is working (accessed at GET http://localhost:3001/api)				/**/
 /**/      router.get('/', function (req, res) {																		/**/
 /**/          res.json({ StatusCode: 200, Api: 'API OK !!!' });														/**/
-/**/      });																										/**/
+        /**/
+});																										/**/
 /**/  																												/**/
 /**/      setRoutes();																								/**/
 /**/  																												/**/
@@ -58,7 +59,8 @@ function setRoutes() {
 /**/      // =============================================================================							/**/
 /**/      app.listen(port);																							/**/
 /**/      console.log('Magic happens on port ' + port);																/**/
-/**/ })();																											/**/
+    /**/
+})();																											/**/
 /**/																												/**/
 /* =================================================================================================================  */
 /* =================================================================================================================  */
