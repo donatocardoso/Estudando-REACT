@@ -1,25 +1,27 @@
+
+
 const ParticipanteRepository = {
 
     getAll: function() {
-        return 'getAll';
+        return 'getAll Repository';
     },
 
-    get: function() {
-        return 'get';
+    get: function(id) {
+        return `get - Repository - id = ${id}`;
     },
 
     post: function() {
-        return 'post';
+        return 'post Repository';
     },
 
     put: function() {
-        return 'put';
+        return 'put Repository';
     },
 
     delete: function() {
-        return 'delete';
+        return 'delete Repository';
     }
 
 }
 
-export default ParticipanteRepository;
+module.exports = ParticipanteRepository;

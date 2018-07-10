@@ -1,13 +1,13 @@
-import participanteRepository from '../../5-Infra/Repositories/ParticipanteRepository'
+var ParticipanteRepository = require('../../5-Infra/Repositories/ParticipanteRepository');
 
 const ParticipanteController = {
 
     getAll: function() {
-        return participanteRepository.getAll();;
+        return ParticipanteRepository.getAll();
     },
 
-    get: function(numSeqlParticipante) {
-        return participanteRepository.get(numSeqlParticipante);
+    get: function(id = 0) {
+        return ParticipanteRepository.get(id);
     },
 
     post: function() {
@@ -18,10 +18,10 @@ const ParticipanteController = {
         return 'put';
     },
 
-    delete: function(numSeqlParticipante) {
-        return participanteRepository.delete(numSeqlParticipante);
+    delete: function() {
+        return ParticipanteRepository.delete();
     }
 
 }
 
-export default ParticipanteController;
+module.exports = ParticipanteController;
