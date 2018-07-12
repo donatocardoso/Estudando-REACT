@@ -6,7 +6,7 @@ const ParticipanteController = {
         return ParticipanteRepository.getAll();
     },
 
-    get: function(id = 0) {
+    get: function(id) {
         return ParticipanteRepository.get(id);
     },
 
