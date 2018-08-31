@@ -1,75 +1,77 @@
-var router = require('express').Router();
+import { Router } from "express";
+import IResponseController from "../Interfaces/IResponseController";
+import IBaseController from "../Interfaces/IBaseController";
 
-class  BaseController {
+class BaseController extends IBaseController {
 
-    static constructor() {}
+    constructor() {}
 
-    static Get(route, params, func) {
-        if(typeof(route) == 'string') {
-            router.get('/get' + route, function (req, res, next) {
+    Get(route, params, func) {
+        if(typeof(route) == "string") {
+            Router.get("/get" + route, function (req, res, next) {
     
-                if(typeof(func) == 'function' && typeof(params) == 'object') {
+                if(typeof(func) == "function" && typeof(params) == "object") {
                     for (var item in params) {
                         params[item] = req.params[item];
                     }
     
                     res.json(func(params));
                 } else {
-                    res.json({ StatusCode: 404, Message: 'Falha metodo não encontrado !!!' });
+                    res.json({ StatusCode: 404, Message: "Falha metodo não encontrado !!!" });
                 }
     
             });
         }
     }
     
-    static Post(route, params, func) {
-        if(typeof(route) == 'string') {
-            router.post('/post' + route, function (req, res, next) {
+    Post(route, params, func) {
+        if(typeof(route) == "string") {
+            Router.post("/post" + route, function (req, res, next) {
     
-                if(typeof(func) == 'function' && typeof(params) == 'object') {
+                if(typeof(func) == "function" && typeof(params) == "object") {
                     for (var item in params) {
                         params[item] = req.body[item];
                     }
     
                     res.json(func(params));
                 } else {
-                    res.json({ StatusCode: 404, Message: 'Falha metodo não encontrado !!!' });
+                    res.json({ StatusCode: 404, Message: "Falha metodo não encontrado !!!" });
                 }
     
             });
         }
     }
     
-    static Put(route, params, func) {
-        if(typeof(route) == 'string') {
-            router.put('/put' + route, function (req, res, next) {
+    Put(route, params, func) {
+        if(typeof(route) == "string") {
+            Router.put("/put" + route, function (req, res, next) {
     
-                if(typeof(func) == 'function' && typeof(params) == 'object') {
+                if(typeof(func) == "function" && typeof(params) == "object") {
                     for (var item in params) {
                         params[item] = req.body[item];
                     }
     
                     res.json(func(params));
                 } else {
-                    res.json({ StatusCode: 404, Message: 'Falha metodo não encontrado !!!' });
+                    res.json({ StatusCode: 404, Message: "Falha metodo não encontrado !!!" });
                 }
     
             });
         }
     }
     
-    static Delete(route, params, func) {
-        if(typeof(route) == 'string') {
-            router.delete('/delete' + route, function (req, res, next) {
+    Delete(route, params, func) {
+        if(typeof(route) == "string") {
+            Router.delete("/delete" + route, function (req, res, next) {
     
-                if(typeof(func) == 'function' && typeof(params) == 'object') {
+                if(typeof(func) == "function" && typeof(params) == "object") {
                     for (var item in params) {
                         params[item] = req.params[item];
                     }
     
                     res.json(func(params));
                 } else {
-                    res.json({ StatusCode: 404, Message: 'Falha metodo não encontrado !!!' });
+                    res.json({ StatusCode: 404, Message: "Falha metodo não encontrado !!!" });
                 }
     
             });
@@ -78,4 +80,4 @@ class  BaseController {
 
 }
 
-module.exports = BaseController;
+export default BaseController;

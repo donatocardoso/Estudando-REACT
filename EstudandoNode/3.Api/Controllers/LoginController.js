@@ -1,15 +1,29 @@
-var BaseController = require('./BaseController');
-var LoginModel = require('../../4.Domain/Model/LoginModel');
-var _loginService = new (require('../../4.Domain/Services/LoginService'))();
+import ILoginController  from "./BaseController";
+import LoginModel      from "../../4.Domain/Model/LoginModel";
+import _loginService   from "../../4.Domain/Services/LoginService";
 
-class LoginController extends BaseController {
+class LoginController extends ILoginController {
 
     constructor() {
-        this.Post('', { Login:'', Senha:'' }, function(o) {
-            return _loginService.getLogin(new LoginModel(o.Login, o.Senha));
+        _loginService = new _loginService();
+
+        super.Get("", {}, function name(params) {
+        
+        });
+
+        super.Post("", {}, function name(params) {
+        
+        });
+        
+        super.Put("", {}, function name(params) {
+            
+        });
+        
+        super.Delete("", {}, function name(params) {
+            
         });
     }
-    
+
 }
 
-module.exports = LoginController;
+export default LoginController;
