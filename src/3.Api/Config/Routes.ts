@@ -1,7 +1,11 @@
 "use strict";
 
-import login           from "../Controllers/LoginController";
+import LoginController from "../Controllers/LoginController";
 
-exports.Routers = function(app){
-    app.use("/login", login);
+export default class Routers {
+
+    static Bind(app) {
+        app.use("/login", LoginController);
+    }
+
 }

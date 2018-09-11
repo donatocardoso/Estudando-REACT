@@ -1,21 +1,15 @@
-"use strict";
-
 import express      from "express";
 import bodyParser   from "body-parser";
-import mongoose     from "mongoose";
-import bluebird     from "bluebird";
 
-var urlPost = bodyParser.urlencoded({ extended: true });
+import Routes from "./Routes";
+import DependencyInjection from "./DependencyInjection";
 
 var app = express();
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// conecta no banco de dados
-mongoose.Promise = bluebird;
-mongoose.connect("mongodb://localhost/academico", { promiseLibrary: bluebird })
-  .then(() =>  console.log("connection succesful"))
-  .catch((err) => console.error(err));
-
-require("./Routes").Routers(app);
+Routes.Bind(app);
+DependencyInjection.Bind();
 
 app.listen(3001);
+console.log("API OK !!!")
