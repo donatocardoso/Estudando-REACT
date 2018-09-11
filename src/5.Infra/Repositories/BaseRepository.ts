@@ -2,7 +2,7 @@
 
 export default class BaseRepository {
 
-    response() {
+    protected response() {
         return "BaseRepository";
     }
 

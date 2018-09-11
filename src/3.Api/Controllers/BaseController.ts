@@ -7,7 +7,7 @@ export default class BaseController implements IBaseController {
 
     Get(route, params, func) {
         if(typeof(route) == "string") {
-            Router.get("/get" + route, function (req, res, next) {
+            Router().get("/get" + route, function (req, res, next) {
     
                 if(typeof(func) == "function" && typeof(params) == "object") {
                     for (var item in params) {
@@ -25,7 +25,7 @@ export default class BaseController implements IBaseController {
     
     Post(route, params, func) {
         if(typeof(route) == "string") {
-            Router.post("/post" + route, function (req, res, next) {
+            Router().post("/post" + route, function (req, res, next) {
     
                 if(typeof(func) == "function" && typeof(params) == "object") {
                     for (var item in params) {
@@ -43,7 +43,7 @@ export default class BaseController implements IBaseController {
     
     Put(route, params, func) {
         if(typeof(route) == "string") {
-            Router.put("/put" + route, function (req, res, next) {
+            Router().put("/put" + route, function (req, res, next) {
     
                 if(typeof(func) == "function" && typeof(params) == "object") {
                     for (var item in params) {
@@ -61,7 +61,7 @@ export default class BaseController implements IBaseController {
     
     Delete(route, params, func) {
         if(typeof(route) == "string") {
-            Router.delete("/delete" + route, function (req, res, next) {
+            Router().delete("/delete" + route, function (req, res, next) {
     
                 if(typeof(func) == "function" && typeof(params) == "object") {
                     for (var item in params) {

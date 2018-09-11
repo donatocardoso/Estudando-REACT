@@ -1,11 +1,13 @@
 "use strict";
 
-import _loginRepository from "../../5.Infra/Repositories/LoginRepository";
+import LoginRepository from "../../5.Infra/Repositories/LoginRepository";
 
 export default class LoginService {
 
-    getLogin(model) {
-        return _loginRepository.getLogin(model);
+    private _loginRepository = new LoginRepository();
+
+    public getLogin(model) {
+        return this._loginRepository.getLogin(model);
     }
 
 }

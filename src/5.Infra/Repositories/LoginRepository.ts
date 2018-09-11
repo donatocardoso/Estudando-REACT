@@ -4,7 +4,7 @@ import BaseRepository from "./BaseRepository";
 
 export default class LoginRepository extends BaseRepository {
 
-    getLogin(model) {
+    public getLogin(model) {
         return model;
     }
 
