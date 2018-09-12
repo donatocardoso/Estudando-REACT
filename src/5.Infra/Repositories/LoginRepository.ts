@@ -1,10 +1,10 @@
-"use strict";
+import LoginModel from "../../4.Domain/Login/Models/LoginModel";
 
-import BaseRepository from "./BaseRepository";
+export default class LoginRepository {
 
-export default class LoginRepository extends BaseRepository {
-
-    public getLogin(model) {
+    constructor() {}
+    
+    public GetLogin(model: LoginModel): LoginModel {
         return model;
     }
 

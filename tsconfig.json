@@ -1,0 +1,29 @@
+{
+    "buildOnSave": true,
+    "compileOnSave": true,
+    "compilerOptions": {
+        "baseUrl": "./lib",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "module": "commonjs",
+		"moduleResolution": "node",
+        "outDir": "./build",
+        "pretty": true,
+        "sourceMap": true,
+        "target": "es6",
+        "typeRoots": [
+            "./node_modules/@types"
+        ],
+        "types": [
+            "node",
+            "reflect-metadata"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ],
+    "include": [
+        "./**/*.ts",
+        "./*.ts"
+    ]
+}

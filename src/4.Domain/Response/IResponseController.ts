@@ -1,5 +1,3 @@
-"use strict";
-
 export default interface IResponseController {
 
     Content: Array<Object> | Object;

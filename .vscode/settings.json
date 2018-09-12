@@ -1,6 +1,10 @@
 {
-	"git.ignoreLimitWarning": true,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false,
+	"editor.tabSize": 4,
 	"files.encoding": "utf8",
 	"files.autoSave": "onFocusChange",
-	"editor.tabSize": 4,
+	"git.ignoreLimitWarning": true,	
+	"git.ignoreMissingGitWarning": true,	
+	"javascript.updateImportsOnFileMove.enabled": "always"
 }

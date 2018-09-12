@@ -1,7 +1,11 @@
-"use strict";
+import LoginModel from "../../4.Domain/Login/Models/LoginModel";
+import LoginService from "../../4.Domain/Login/LoginService";
 
-import BaseController from "./BaseController";
+export default class LoginController {
 
-export default class LoginController extends BaseController {
+    public GetLogin(model: LoginModel): LoginModel {
+
+        return new LoginService().GetLogin(model);
         
+    }
 }
